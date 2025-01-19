@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTMX Modular Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Jura Font Class */
+      .jura {
+        font-family: "Jura", serif;
+        font-optical-sizing: auto;
+        font-weight: 400; /* Use the weight you prefer (300-700) */
+        font-style: normal;
+      }
+
+      /* Roboto Mono Font Class */
+      .roboto-mono {
+        font-family: "Roboto Mono", serif;
+        font-optical-sizing: auto;
+        font-weight: 400; /* Use the weight you prefer (100-700) */
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="jura" id="main-content">
+    <!-- Navbar -->
+    <div hx-get="components/navbar.html" hx-trigger="load"></div>
+
+    <!-- Main Content -->
+    <div>
+      <h1>Welcome to My Website</h1>
+      <p>This is the main section of the page.</p>
+    </div>
+
+    <!-- Footer
+    <div hx-get="components/footer.html" hx-trigger="load"></div> -->
+
+    <button hx-get="components/about.html" hx-target="#content">
+      Load About Section
+    </button>
+    <div id="content">
+      <p>Click the button to load more content!</p>
+    </div>
+
+    <script src="https://unpkg.com/htmx.org"></script>
+  </body>
+</html>
