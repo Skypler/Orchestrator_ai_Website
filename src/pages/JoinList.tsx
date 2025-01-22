@@ -4,7 +4,7 @@ const JoinList = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    carType: "",
+    apptype: "",
     description: "",
   });
 
@@ -30,7 +30,7 @@ const JoinList = () => {
         {
           name: formData.name,
           email: formData.email,
-          carType: formData.carType,
+          carType: formData.apptype,
           description: formData.description,
         },
         "vDBkO8UZ2V6IQ5dNk" // Replace with your EmailJS user ID
@@ -43,7 +43,7 @@ const JoinList = () => {
             name: "",
             email: "",
             description: "",
-            carType: "",
+            apptype: "",
           });
         },
         (error) => {
@@ -98,26 +98,20 @@ const JoinList = () => {
 
           <div>
             <label
-              htmlFor="carType"
+              htmlFor="description"
               className="block text-sm font-medium text-gray-700"
             >
-              Type of Car
+              App-Type
             </label>
-            <select
-              id="carType"
-              name="carType"
-              value={formData.carType}
+            <textarea
+              id="apptype"
+              name="apptype"
+              rows={1}
+              value={formData.apptype}
               onChange={handleChange}
+              placeholder="Write the type of app you want to build?"
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-            >
-              <option value="" disabled>
-                Select a car type
-              </option>
-              <option value="sedan">Sedan</option>
-              <option value="suv">SUV</option>
-              <option value="hatchback">Hatchback</option>
-              <option value="convertible">Convertible</option>
-            </select>
+            ></textarea>
           </div>
 
           <div>
