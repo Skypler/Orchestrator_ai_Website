@@ -1,50 +1,127 @@
-# React + TypeScript + Vite
+# Orchestrator AI Company Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official repository of the **Orchestrator AI** company website. This project is built using modern web development technologies and provides a seamless setup and deployment experience via Docker.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend Framework:** React with Vite for a lightning-fast development experience.
+- **Styling:** Tailwind CSS for utility-first, responsive designs.
+- **Package Management:** Yarn for efficient dependency management.
+- **Containerization:** Docker and Docker Compose for simplified setup and deployment.
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Ensure you have the following installed on your machine:
 
-- Configure the top-level `parserOptions` property like this:
+- **Node.js** (v22 or higher) and **Yarn**
+- **Docker** (latest version)
+- **Docker Compose**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### Local Development
+
+If you want to run the project locally without Docker, follow these steps:
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/Skypler/Orchestrator_ai_Website.git
+   cd orchestrator_ai_website
+   ```
+
+2. **Install Dependencies**:
+
+   ```bash
+   yarn install
+   ```
+
+3. **Run the Development Server**:
+
+   ```bash
+   yarn dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173` to view the site.
+
+### Running with Docker
+
+To run the project using Docker, follow these steps:
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/Skypler/Orchestrator_ai_Website.git
+   cd orchestrator_ai_website
+   ```
+
+2. **Build and Start Containers**:
+
+   ```bash
+   docker-compose up --build
+   ```
+
+3. The website will be accessible at `http://localhost:5173`.
+
+### Stopping the Containers
+
+To stop the Docker containers, run:
+
+```bash
+docker-compose down
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Project Structure
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
+├── docker-compose.yaml
+├── Dockerfile
+├── index.html
+├── node_modules/
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── public/
+├── src/
+│   ├── App.tsx
+│   ├── assets/
+│   ├── components/
+│   ├── index.css
+│   ├── main.tsx
+│   ├── pages/
+│   └── vite-env.d.ts
+├── tailwind.config.js
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+└── yarn.lock
+```
+
+## Scripts
+
+The following scripts are available via Yarn:
+
+- **`yarn dev`**: Start the development server.
+- **`yarn build`**: Build the project for production.
+- **`yarn preview`**: Preview the production build.
+- **`yarn lint`**: Run linting on the codebase.
+
+## Docker Overview
+
+This project includes a `docker-compose.yml` file to streamline containerized deployment. The setup ensures:
+
+- The website is built and served in an optimized Docker container.
+- Dependencies and build processes are isolated from the host environment.
+
+## Contributing
+
+We welcome contributions! If you have suggestions, bug fixes, or enhancements, please submit a pull request. Ensure that your code follows the established coding standards.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Thank you for checking out Orchestrator AI's website repository! If you encounter any issues or have questions, feel free to create an issue in this repository.
