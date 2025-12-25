@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        jura: ["Jura", "serif"], // Add 'Jura' as a custom font family
+        space: ["'Space Grotesk'", "sans-serif"],
       },
     },
   },

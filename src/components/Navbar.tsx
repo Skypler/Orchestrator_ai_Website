@@ -1,66 +1,35 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import Logo from "../assets/images/Logo.svg";
+import Logo from "../assets/images/Logo.png";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const navLinks = ["Products", "Research", "Blogs", "About"];
 
   return (
-    <nav className="flex justify-between items-center p-4 bg-white text-black font-jura shadow-md relative">
+    <nav className="flex items-center justify-between px-12 py-6 bg-[#F8EAE0]">
       {/* Logo Section */}
-      <div className="flex items-center">
-        <img src={Logo} alt="Company Logo" className="w-10 h-auto mr-3" />
-        <NavLink to="/">
-          <span className="text-2xl font-bold">Orchestrator AI</span>
-        </NavLink>
-      </div>
-
-      {/* Hamburger Menu for Mobile */}
-      <div className="md:hidden">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="text-black focus:outline-none"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-            />
-          </svg>
-        </button>
+      <div className="cursor-pointer hover:opacity-80 transition-opacity">
+        <a href={`/`}><img src={Logo} alt="Logo" className="w-32" /></a>
+        
       </div>
 
       {/* Navigation Links */}
-      <ul
-        className={`${
-          isOpen ? "block" : "hidden"
-        } absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent p-4 md:p-0 md:flex space-y-4 md:space-y-0 space-x-0 md:space-x-6 z-10`}
-      >
-        <li>
-          <NavLink
-            to="/features"
-            className="block md:inline hover:text-blue-500 transition-colors"
+      <div className="flex gap-10 text-sm font-medium">
+        {navLinks.map((link) => (
+          <a
+            key={link}
+            href={`${link.toLowerCase()}`}
+            className="relative text-gray-700 hover:text-black transition-colors duration-200 group"
           >
-            Features
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/pricing"
-            className="block md:inline hover:text-blue-500 transition-colors"
-          >
-            Pricing
-          </NavLink>
-        </li>
-      </ul>
+            {link}
+            {/* Animated Underline Effect */}
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        ))}
+      </div>
+
+      {/* CTA Button */}
+      <button className="bg-black text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-all active:scale-95 shadow-sm">
+        Try Orchestrator
+      </button>
     </nav>
   );
 }
