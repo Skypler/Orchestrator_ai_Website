@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 
-.jura {
-    font-family: "Jura", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;  /* Choose a weight, e.g., 400, 500, 600, 700 */
-    font-style: normal;
-  }
+ .font-font {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}

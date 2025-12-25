@@ -1,265 +1,154 @@
-import { NavLink } from "react-router";
-import MainImg from "../assets/images/FirstSecImage.svg";
-import DesignSecImg from "../assets/images/DesignAgentsSec.svg";
-import FigmatoJson from "../assets/images/DesignAgentsSection/FigmaToJson.svg";
-import ReactLogo from "../assets/images/DesignAgentsSection/React.svg";
-import BluePrintFromJson from "../assets/images/DesignAgentsSection/BlueprintFromJSON.svg";
-import AgentPreview from "../assets/images/DesignAgentsSection/PriviewAgent.svg";
-import FrontEndAgentImg from "../assets/images/FrontEndAgentSec.svg";
-import ReactRouterImg from "../assets/images/FrontEndAgentSection/ReactRouter.svg";
-import StateManagementImg from "../assets/images/FrontEndAgentSection/StateManagement.svg";
-import TestingImg from "../assets/images/FrontEndAgentSection/Testing.svg";
-import BackEndAgentImg from "../assets/images/BackendAgentSec.svg";
-import APIImg from "../assets/images/BackendAgentSection/API.svg";
-import DatabaseImg from "../assets/images/BackendAgentSection/Database.svg";
-import JenkinImg from "../assets/images/BackendAgentSection/Jenkins.svg";
-import ExpoAppImg from "../assets/images/BackendAgentSection/ExpoApp.svg";
-import DeploySectionImg from "../assets/images/DeployAgentSecImg.svg";
-import FirebaseImg from "../assets/images/DeployAgentSection/FireBase.svg";
-import VercelImg from "../assets/images/DeployAgentSection/Vercel.svg";
-import AWSImg from "../assets/images/DeployAgentSection/AWS.svg";
-import DataDogImg from "../assets/images/DeployAgentSection/DataDog.svg";
-
+import HeroSectionImage from "../assets/images/HeroSectionImage.svg";
+import ResearchImage from "../assets/images/ResearchDiagram.svg";
+import Image1 from "../assets/images/WhatWeFocusOn/image1.svg";
+import Image2 from "../assets/images/WhatWeFocusOn/image2.svg";
+import Image3 from "../assets/images/WhatWeFocusOn/image3.svg";
 const Home = () => {
   return (
-    <>
-      <div className="font-jura ">
-        {/* Section One */}
-        <div className="flex flex-col items-center justify-center min-h-screen px-4 md:px-20 gap-6">
-          <p className="text-2xl md:text-3xl text-center font-extrabold mx-3">
-            "Figma Designs to Live Apps: Built by AI Agents Team, Directed by
-            You."
+    <div className="min-h-screen  text-black font-sans">
+      {/* Hero Section */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-16 px-12 py-24 items-center">
+        <div>
+          <h1 className="text-5xl font-semibold leading-tight mb-6">
+            Pioneering research. <br />
+            Building intelligent <br />
+            products
+          </h1>
+          <p className="text-sm max-w-md text-gray-800">
+            Building AI agents and foundational models designed to work together
+            that collaborate seamlessly, solve real problems, and empower
+            humans.
           </p>
-          <p className="text-lg md:text-xl text-center  font-semibold">
-            "AI Agents: Building, Hosting, and Growing Your App While You Focus
-            on Your Goals."
+        </div>
+
+        <div className="flex justify-center">
+          <div className="w-72 h-72 rounded-2xl bg-[#F1E4D8] flex items-center justify-center">
+            {/* Placeholder for network icon */}
+            <div className="w-full h-full flex items-center justify-center">
+              <img src={HeroSectionImage} alt="Hero Section Image" />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* How We Build */}
+      <section className="flex flex-col items-center py-20 px-6 max-w-4xl mx-auto text-center font-sans text-gray-900">
+        {/* Header */}
+        <h1 className="text-4xl font-semibold mb-12">How We Build</h1>
+
+        {/* Section 1: Coding */}
+        <div className="mb-10">
+          <h2 className="text-xl font-bold mb-2">Coding is the core.</h2>
+          <p className="text-lg leading-relaxed text-gray-700">
+            The strongest LLMs aren’t just chatty. They build.
+            <br />
+            We focus on models that think in code, reason deeply, and turn
+            problems into working systems.
           </p>
-          <button className="bg-blue-500 font-bold rounded-md px-6 py-2 md:text-2xl md:px-10">
-            <NavLink to="/joinlist" className="transition-colors text-white">
-              Join Waitlist
-            </NavLink>
-          </button>
+        </div>
+
+        {/* Section 2: Small models */}
+        <div className="mb-12">
+          <h2 className="text-xl font-bold mb-2">
+            Small models, big capability.
+          </h2>
+          <p className="text-lg leading-relaxed text-gray-700">
+            We distill large models into compact ones with almost no
+            intelligence loss.
+            <br />
+            This makes advanced AI cheap, fast, and accessible to everyone.
+          </p>
+        </div>
+
+        {/* Diagram Placeholder */}
+        <div className="w-full rounded-lg p-8 mb-16 flex flex-col items-center">
           <img
-            src={MainImg}
-            alt="Main Visual"
-            className="w-full max-w-xs md:max-w-sm lg:max-w-md"
+            src={ResearchImage}
+            alt="Knowledge Distillation Diagram"
+            className="max-w-full h-auto"
           />
         </div>
 
-        {/* Section Two */}
-        <div className="flex flex-col items-center justify-center mx-4 md:mx-20 gap-6 min-h-screen">
-          <div className="text-center space-y-10">
-            <p className="text-2xl md:text-3xl font-semibold mb-10">
-              Design Agents
-            </p>
-            <p className="text-lg md:text-xl text-justify mx-4">
-              From any Inputs like Figma or Screenshots to DESIGN AGENTS will
-              extract JSON to create proper Components from the Design.
-            </p>
-            <img
-              src={DesignSecImg}
-              alt="Design Agents Image"
-              className="mx-auto my-4 w-full max-w-lg md:max-w-xl lg:max-w-2xl"
-            />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 space-y-3">
-            <div className="p-4 text-center space-y-3">
-              <img src={FigmatoJson} alt="Figma to JSON" className="mx-auto" />
-              <p className="font-bold">Figma to JSON</p>
-              <p>Convert Figma files to JSON for all of pages.</p>
-            </div>
-            <div className="p-4 text-center space-y-3">
-              <img src={ReactLogo} alt="React Components" className="mx-auto" />
-              <p className="font-bold">Detect React Components</p>
-              <p>Detect all the components from JSON and align properly.</p>
-            </div>
-            <div className="p-4 text-center space-y-3">
-              <img
-                src={BluePrintFromJson}
-                alt="Blueprint from JSON"
-                className="mx-auto"
-              />
-              <p className="font-bold">Build Full Blueprint from JSON</p>
-              <p>
-                Build Full Blueprint from JSON for all the rest of the Tasks as
-                well.
-              </p>
-            </div>
-            <div className="p-4 text-center space-y-3">
-              <img src={AgentPreview} alt="Preview Agent" className="mx-auto" />
-              <p className="font-bold">Preview Agent show Preview</p>
-              <p>
-                Now, the Preview agent will show Preview of the Frontend you can
-                edit it just by saying what you want.
-              </p>
-            </div>
-          </div>
+        {/* Section 3: Ideology */}
+        <div className="mb-10">
+          <h2 className="text-xl font-bold mb-2">Our ideology</h2>
+          <p className="text-lg leading-relaxed text-gray-700">
+            Intelligence should be accessible.
+            <br />
+            We compress frontier-level coding models into tiny, efficient
+            systems without losing capability.
+            <br />
+            This makes advanced reasoning and creation tools available to
+            anyone, anywhere.
+          </p>
         </div>
 
-        {/* Section Three */}
-        <div className="min-h-screen flex flex-col items-center justify-center mx-4 md:mx-20 gap-6">
-          <div className="text-center space-y-10">
-            <p className="text-2xl md:text-3xl font-semibold mb-10">
-              Frontend Agents
-            </p>
-            <p className="text-lg md:text-xl text-justify mx-4">
-              This will take the Components and start writing Code for
-              Components, Navigation and State Management and test all in Monaco
-              Editor integrated in Product.
-            </p>
-            <img
-              src={FrontEndAgentImg}
-              alt="Frontend Agents Image"
-              className="mx-auto my-4 w-full max-w-lg md:max-w-xl lg:max-w-3xl"
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 space-y-3">
-            <div className="p-4 text-center space-y-4">
-              <img src={ReactLogo} alt="" className="mx-auto" />
-              <p className="font-semibold">
-                React Native Code for All the Pages
-              </p>
-              <p>Write code to all the Pages of the Design Pages.</p>
-            </div>
-            <div className="p-4 text-center space-y-4">
-              <img src={ReactRouterImg} alt="" className="mx-auto" />
-              <p className="font-semibold">React Router Navigation Code</p>
-              <p>
-                Make the flow for all the pages and add External API as well.
-              </p>
-            </div>
-            <div className="p-4 text-center space-y-4">
-              <img src={StateManagementImg} alt="" className="mx-auto" />
-              <p className="font-semibold">
-                State Management Code to all the Pages
-              </p>
-              <p>
-                Write all the State Management code for all the pages and
-                actions.
-              </p>
-            </div>
-            <div className="p-4 text-center space-y-4">
-              <img src={TestingImg} alt="" className="mx-auto" />
-              <p className="font-semibold">Testing Full Frontend</p>
-              <p>Test all the pages full complete the full entire Frontend.</p>
-            </div>
-          </div>
+        {/* Section 4: Why It Matters */}
+        <div>
+          <h2 className="text-xl font-bold mb-2">Why It Matters</h2>
+          <p className="text-lg leading-relaxed text-gray-700">
+            If intelligence stays locked behind huge servers and huge prices,
+            only a tiny
+            <br />
+            fraction of humanity will ever create.
+          </p>
         </div>
+      </section>
 
-        {/* Section Four */}
-        <div className="min-h-screen flex flex-col items-center justify-center mx-4 md:mx-20 gap-6">
-          <div className="text-center space-y-10">
-            <p className="text-2xl md:text-3xl font-semibold mb-10">
-              Backend Agents
-            </p>
-            <p className="text-lg md:text-xl text-justify mx-4">
-              This will take the Components and start writing Code for API
-              calls, Database Integration, and Testing. The entire process is
-              streamlined using Monaco Editor integrated into the Product.
-            </p>
-            <img
-              src={BackEndAgentImg}
-              alt="Backend Agents Image"
-              className="mx-auto my-4 w-full max-w-lg md:max-w-xl lg:max-w-2xl"
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 space-y-3">
-            <div className="p-4 text-center space-y-4">
-              <img src={APIImg} alt="API Logo" className="mx-auto" />
-              <p className="font-semibold">API Development</p>
-              <p>
-                Create API calls for the Frontend and integrate them seamlessly.
-              </p>
-            </div>
-            <div className="p-4 text-center space-y-4">
-              <img src={DatabaseImg} alt="Database Logo" className="mx-auto" />
-              <p className="font-semibold">Database Integration</p>
-              <p>
-                Connect to SQL or NoSQL databases like MongoDB for backend data
-                management.
-              </p>
-            </div>
-            <div className="p-4 text-center space-y-4">
-              <img src={JenkinImg} alt="Jest Logo" className="mx-auto" />
-              <p className="font-semibold">Backend Testing</p>
-              <p>
-                Test API calls with tools like Jest and ensure seamless
-                functionality.
-              </p>
-            </div>
-            <div className="p-4 text-center space-y-4">
-              <img src={ExpoAppImg} alt="Expo Logo" className="mx-auto" />
-              <p className="font-semibold">App Packaging</p>
-              <p>
-                Package the backend code and integrate it into a full Expo App.
-              </p>
-            </div>
-            <div className="p-4 text-center space-y-4">
-              <img src={TestingImg} alt="Testing Logo" className="mx-auto" />
-              <p className="font-semibold">Comprehensive Testing</p>
-              <p>
-                Run complete backend tests with AI-driven suggestions for
-                optimization and fixes.
-              </p>
-            </div>
-          </div>
-        </div>
+      {/* Focus Section */}
+      <section className="px-12 py-24">
+        <h2 className="text-center text-xl font-medium mb-20">
+          What We Focus On
+        </h2>
 
-        {/* Section Five */}
-        <div className="min-h-screen flex flex-col items-center justify-center mx-4 md:mx-20 gap-6">
-          <div className="text-center space-y-10">
-            <p className="text-2xl md:text-3xl font-semibold mb-10">
-              Deploy Agents.
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
+          <div>
+            <h3 className="font-semibold mb-4">
+              Small High-Performance Models
+            </h3>
+            <p className="text-sm text-gray-800 max-w-md">
+              We compress large frontier models into tiny, efficient systems
+              without losing their reasoning power. These distilled models run
+              fast, cost almost nothing to operate, and bring advanced
+              intelligence to devices and teams that could never afford it
+              before.
             </p>
-            <p className="text-lg md:text-xl text-justify mx-4">
-              Move the fully built app from Development to Production with
-              agents working collaboratively to ensure all components are ready
-              for deployment.
-            </p>
-            <img
-              src={DeploySectionImg}
-              alt="Deploy Agents Image"
-              className="mx-auto my-4 w-full max-w-lg md:max-w-xl lg:max-w-2xl"
-            />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 space-y-3">
-            <div className="p-4 text-center space-y-4">
-              <img src={FirebaseImg} alt="Firebase Logo" className="mx-auto" />
-              <p className="font-semibold">Firebase Integration</p>
-              <p>
-                Seamlessly deploy your app to Firebase, ensuring scalability and
-                reliability.
-              </p>
-            </div>
-            <div className="p-4 text-center space-y-4">
-              <img src={VercelImg} alt="Vercel Logo" className="mx-auto" />
-              <p className="font-semibold">Vercel Deployment</p>
-              <p>
-                Deploy your web application effortlessly to Vercel with
-                optimized configurations.
-              </p>
-            </div>
-            <div className="p-4 text-center space-y-4">
-              <img src={AWSImg} alt="AWS Logo" className="mx-auto" />
-              <p className="font-semibold">AWS Hosting</p>
-              <p>
-                Utilize AWS for hosting and deploying your backend and frontend
-                services with reliability.
-              </p>
-            </div>
-            <div className="p-4 text-center space-y-4">
-              <img src={DataDogImg} alt="Datadog Logo" className="mx-auto" />
-              <p className="font-semibold">Monitoring with Datadog</p>
-              <p>
-                Monitor the deployed application with Datadog to ensure
-                performance and detect issues in real-time.
-              </p>
-            </div>
+
+          <div className="flex justify-center">
+            <img src={Image1} alt="" />
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-4">Code-Native Intelligence</h3>
+            <p className="text-sm text-gray-800 max-w-md">
+              Our models think in code. They reason structurally, solve problems
+              like engineers, and translate ideas directly into working systems.
+              This is the foundation behind Orchestrator AI.
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <img src={Image2} alt="" />
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-4">Understanding User Intent</h3>
+            <p className="text-sm text-gray-800 max-w-md">
+              True intelligence begins with understanding what humans actually
+              mean.
+            </p>
+            <p className="text-sm text-gray-800 max-w-md">
+              We build models that infer goals, clarify ambiguity, and structure
+              tasks so people can focus on creativity, not babysitting the AI.
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <img src={Image3} alt="" />
           </div>
         </div>
-      </div>
-    </>
+      </section>
+    </div>
   );
 };
 
