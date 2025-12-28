@@ -35,7 +35,7 @@ const Research = () => {
 
           <div className="flex justify-center items-center">
             <div className="text-center">
-              <img src={Image1} alt="" />
+              <img src={Image1} alt="" className="w-32" />
             </div>
           </div>
         </section>
@@ -71,7 +71,7 @@ const Research = () => {
 
           <div className="flex justify-center items-center">
            
-              <img src={Image2} alt="" />
+              <img src={Image2} alt="" className="w-32" />
             
           </div>
         </section>
@@ -108,7 +108,7 @@ const Research = () => {
           </div>
 
           <div className="flex justify-center items-center">
-            <img src={Image3} alt="" />
+            <img src={Image3} alt="" className="w-32" />
           </div>
         </section>
 
@@ -145,7 +145,7 @@ const Research = () => {
           </div>
 
           <div className="flex justify-center items-center">
-            <img src={Image4} alt="" />
+            <img src={Image4} alt="" className="w-32" />
           </div>
         </section>
 
