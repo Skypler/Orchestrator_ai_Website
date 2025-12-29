@@ -1,6 +1,6 @@
-# Orchestrator AI Company Website
+# Skypler AI Company Website
 
-Welcome to the official repository of the **Orchestrator AI** company website. This project is built using modern web development technologies and provides a seamless setup and deployment experience via Docker.
+Welcome to the official repository of the ** Skypler AI** company website. This project is built using modern web development technologies and provides a seamless setup and deployment experience via Docker.
 
 ## Features
 
